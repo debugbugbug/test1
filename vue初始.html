@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.使用vue  必须引包  下载： npm install --save vue -->
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    
+</head>
+<body>
+    <!-- 2.创建视图 V-->
+    <div id="demodiv">
+        <!-- 双花括号 赋值大法 
+        模板语法
+        模板表达式
+        -->
+        
+        {{text}}
+        {{arr}}
+        {{1+2}}
+        <!-- 虽然在双括号中可以写复杂语法，但是注意：千万不要用
+        原因：demodiv这个内容是视图层，视图层的作用是展示，不是数据的处理
+        不要在视图层中太复杂的语法 -->
+        {{num.substr(1,4).toUpperCase()}}
+        {{obj.name}}
+        {{obj.age}}
+    </div>
+
+    <script>
+
+        // 3.创建视图模型  VM 就是Vue实例   就是模型和视图之间的桥梁
+        new Vue({
+            el:"#demodiv",   //绑定视图
+            data:{          //模型
+                text:"我是模型数据",
+                arr:[11,22,33,44,55,77,88],
+                num:"abcdefg",
+                obj:{
+                    name:"xixi",
+                    age:"18"
+                }
+            }        
+        })
+
+
+        // 表达式是什么？
+        // 调用之后会返回结果的运算
+    </script>
+</body>
+</html>

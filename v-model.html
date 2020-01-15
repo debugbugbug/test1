@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="demodiv">
+        <!-- 
+            v-model  指令  向表单元素绑定数据 
+            作用：完成双向数据绑定
+            视图的数据发生改变了 ----》 模型也随之发生改变了
+        -->
+        <input type="text" v-model="text"/>
+    </div>
+    <script>
+        new Vue({
+            el:"#demodiv",
+            data:{
+                text:"你好么么哒"
+            }
+        })
+    </script>
+</body>
+</html>

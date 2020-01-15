@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="demodiv">
+        <!-- v-show  指令  对网页元素进行css控制的显示或者隐藏  他接受了一个布尔值，true（显示） false（隐藏） -->
+        <h1 v-show="false">来看看我隐藏没</h1>
+    </div>
+    <script>
+        new Vue({
+            el:"#demodiv",
+            data:{
+
+            }
+        })
+    </script>
+</body>
+</html>

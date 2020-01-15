@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="demodiv">
+        <!-- 
+            v-on指令  对于网页元素进行事件的绑定
+            v-on:事件名 = “函数名”
+        -->
+        <button v-on:click="fun()">点我</button>
+
+        <!-- 
+            推荐写法：简写
+            @简写
+            @click="函数()"
+        -->
+
+        <button @click="fun()">简写</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#demodiv",
+            data:{
+
+            },
+            // 写函数：与data和el同级，创建一个 methods:{函数}
+            methods:{
+                fun(){
+                    console.log("aaaa");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
